@@ -4,7 +4,7 @@ if (isset($_POST['submit']))
  {
 
 	// connect to database
-	$conn = mysqli_connect("localhost", "root", "NO", "valorant");
+	$conn = mysqli_connect("localhost", "root", "", "valorant");
 
 	if (!$conn) {
 		die("Error connecting to database: " . mysqli_connect_error());
@@ -14,12 +14,6 @@ $pass=$_POST['password1'];
 $sql3 = "SELECT * FROM login where username='$user' ";  
 $result = $conn->query($sql3);
 
-function function_alert() { 
-    echo "<script>
-      alert('Invalid Credentials');
-      window.location.href='http://localhost/User-registration/Homepage.html';
-      </script>"; 
-    }
  
 
 if ($result->num_rows> 0) {
@@ -29,7 +23,7 @@ if ($result->num_rows> 0) {
     	header("location:admin.php");
     }
     else{
-    	function_alert();
+    	header("location:login.html");
     }
   }
 }

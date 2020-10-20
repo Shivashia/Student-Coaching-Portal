@@ -16,11 +16,11 @@
           <i class="fas fa-times"></i>
         </div>
         <li><a href="Homepage.html">Home</a></li>
-        <li><a href="http://localhost/User-registration/about.php">About</a></li>
+        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/about.php">About</a></li>
         <!-- <li><a href="#">Services</a></li> -->
-        <li><a href="http://localhost/User-registration/register.php">Register</a></li>
+        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
          <!-- <li><a href="#">Contact</a></li> -->
-        <li id="log"><a href="http://localhost/User-registration/Homepage.html">Logout</a></li>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -36,7 +36,7 @@
       Student Details
     </h3>
     <hr>
-    <form method="post" action="http://localhost/User-registration/register.php" onsubmit="return validate()">
+    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php" onsubmit="return validate()">
       <label class="studname">
         Student Name
       </label>
@@ -280,7 +280,7 @@ $lang = implode(",",$_POST['val1']);
 $gen= $_POST["gender"];
 $em= $_POST["email"];
 $fee=$_POST["paisa"];
-$conn = mysqli_connect("localhost", "root", "NO", "valorant");
+$conn = mysqli_connect("localhost", "root", "", "valorant");
 
 	if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());

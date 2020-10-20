@@ -18,9 +18,9 @@
         <li><a href="Homepage.html">Home</a></li>
         <!-- <li><a href="http://localhost/User-registration/aboutus.html">About</a></li> -->
         <!-- <li><a href="#">Services</a></li> -->
-        <li><a href="http://localhost/User-registration/register.php">Register</a></li>
+        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
         <!-- s -->
-        <li id="log"><a href="http://localhost/User-registration/login.php">Login</a></li>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php">Login</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -109,32 +109,7 @@
     </p>
   </div>
 </div>
-<div>
-    <button class="open-button" onclick="openForm()">Admin</button>
-
-  <div class="form-popup" id="myForm">
-    <form method="post" action="http://localhost/User-registration/checklogin.php" class="form-container">
-      <h1>Login</h1>
-
-      <label for="email"><b>Username</b></label>
-      <input type="text" placeholder="Enter Name" name="username1" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password1" required>
-
-      <input type="submit" name="submit" id="submit1" value="Generate" class="btn">
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
-  </div>
-</div>
 <script type="text/javascript">
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector(".menu-btn");
