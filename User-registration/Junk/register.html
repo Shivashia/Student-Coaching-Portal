@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    body{
+      background-color:  #EBEDED;
+
+    }
+    .container{
+      width: 1000px;
+      margin: auto;
+      background-color:#A7BDBE;
+    }
+    .studname{
+      float: left;
+    }
+    #mobile{
+      float: right; 
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h3>
+      Student Details
+    </h3>
+    <hr>
+    <form>
+      <label class="studname">
+        Student Name
+      </label>
+      <br>
+      <br>
+      <div class="your-class">
+        <input name="first_name" id="First_Name" type="text" placeholder="FirstName" />
+        <input name="middle_name" id="First_Name" type="text" placeholder="MiddleName"/>
+        <input name="last_name" id="Last_Name" type="text" placeholder="LastName" /> 
+
+      </div>
+      <br>
+      <hr>
+      <label class="studname">
+        Birth Date
+      </label>
+      <br>
+      <input type="date" id="birthday" name="birthday">
+      <br>
+      <hr>
+      <label class="studname">
+        Gender
+      </label>
+      <br>
+      <select name="cars" id="cars">
+        <option value="volvo">Male</option>
+        <option value="saab">Female</option>
+        <option value="opel">Others</option>
+      </select>
+      <br>
+      <hr>
+      <label class="studname">
+        Address
+      </label>
+      <br>
+      <br>
+      <textarea rows="5" name="address" placeholder="Enter The address here" cols="50"></textarea>
+      <br>
+  
+      <label class="studname">
+        Student Email
+      </label>
+      <br>
+      <br>
+      <input type="Email" name="email" placeholder="email@xyz.com/in">
+      <br>
+      <hr>
+      <label class="studname">
+        Contact numbers
+      </label>
+      <br>
+      <br>
+      <div >
+        <label>Mobile Number</label>
+        <input type="Number" name="mobno1">
+        <label>Telephone Number</label>
+        <input type="Number" name="mobno2">
+      </div>
+      <hr>
+      <label class="studname">
+        Programming Languages
+      </label>
+      <br>
+      <br>
+      <div class="checkbox checkbox-inline">
+           <label>
+            <input name="val1[]" type="checkbox" value="Python" id="checkbox1">
+            Python
+            </label>
+          <label>
+            <input name="val1[]" type="checkbox" value="Java" id="checkbox2">
+            Java
+          </label>
+          <label>
+            <input name="val1[]" type="checkbox" value="R" id="checkbox2">
+            R
+          </label>
+
+        </div>
+        <input type="button" name="butt1" value="Generate" onclick="feesgenerate()">
+        <div id="fees">
+
+        </div>
+        <br>
+        <br>
+        <hr>
+        <input type="submit" name="submit2" value="Submit Form">
+
+
+
+
+
+    </form>
+    
+  </div>
+
+
+</body>
+</html>
