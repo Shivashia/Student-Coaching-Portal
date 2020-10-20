@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2020 at 10:40 PM
+-- Generation Time: Oct 20, 2020 at 10:10 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -66,7 +66,8 @@ CREATE TABLE `student_table` (
 --
 
 INSERT INTO `student_table` (`student_id`, `first_name`, `mid_name`, `last_name`, `password`, `dob`, `gender`, `address`, `email`, `mob_no`, `tele_no`, `subjects`, `fee`) VALUES
-(42, 'Samar', 'Chu', 'Bansod', '1234', '2020-10-08', 'others', 'wsvewgewgewgwe', 'dva@sdff.com', 198219219, 238298293819, 'R', 15000);
+(42, 'Samar', 'Chu', 'Bansod', '1234', '2020-10-08', 'others', 'wsvewgewgewgwe', 'dva@sdff.com', 198219219, 238298293819, 'R', 15000),
+(88, 'Ananay', 'R', 'Agarwal', 'Pass@123', '2000-03-25', 'male', '', 'kuro@gmail.com', 9000000000, 9000000000, 'Python,Java', 55000);
 
 --
 -- Indexes for dumped tables
@@ -92,7 +93,7 @@ ALTER TABLE `student_table`
 -- AUTO_INCREMENT for table `student_table`
 --
 ALTER TABLE `student_table`
-  MODIFY `student_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `student_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
