@@ -19,32 +19,32 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
   margin-top: 10px;
 }
 
-#customers {
+#student-display {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
-#customers th {
+#student-display th {
   border: 1px solid #ddd;
   padding: 8px;
   font-weight: bold;
 }
 
-#customers td{
+#student-display td{
   border: 1px solid #ddd;
   padding: 8px;
 }
 
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#student-display tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#student-display tr:hover {background-color: #ddd;}
 
-#customers th {
+#student-display th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #f45702;
   color: white;
 }
 
@@ -102,7 +102,7 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
   <div class="bg">
 </div>
   <div id="updatecontainer">
-    <table id="customers">
+    <table id="student-display">
     <tr>
     <th>Student Id</th>
     <th>First Name</th>

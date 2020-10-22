@@ -26,15 +26,6 @@ $row= mysqli_fetch_array($result);
 <title>Update Student Data</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
-  <style type="text/css">
-    .updatedisplay{
-      height: 70%;
-      width: 50%;
-      margin: auto;
-      background-color: inherit;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
 <nav class="navbar">
@@ -62,10 +53,10 @@ $row= mysqli_fetch_array($result);
     
   </div>
 <div class="updatedisplay">
-<form method="post" action="">
+<form method="post" action="" id="dis">
   Student ID: <br>
   <input type="hidden" name="student_id" class="txtField" value="<?php echo $row['student_id']; ?>">
-  <input type="text" name="student_id"  value="<?php echo $row['student_id']; ?>">
+  <input type="text" name="student_id" disabled value="<?php echo $row['student_id']; ?>">
   <br>
   First Name: <br>
   <input type="text" name="first_name" class="txtField" value="<?php echo $row['first_name']; ?>">
@@ -88,7 +79,7 @@ $row= mysqli_fetch_array($result);
   Telephone:<br>
   <input type="number" name="tele_no" class="txtField" value="<?php echo $row['tele_no']; ?>">
   <br>
-  <input type="submit" name="submit" value="Submit">
+  <input type="submit" name="submit" id="update-student" value="Submit">
 </form>
 </div>
 </body>

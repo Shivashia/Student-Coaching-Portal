@@ -69,10 +69,11 @@ body, html {
   color: #007bff;
 }
 .about{
-  padding: 30px 0;
+  padding: 0px 0;
   background-color: inherit;
 }
 .about .title{
+  padding: 30px 0;
   margin-left: 325px; 
   font-size: 38px;
   font-weight: 700;
@@ -322,15 +323,79 @@ img {vertical-align: middle;}
 }
 /*Register page*/
 .studname{
-   float: left;
+   display: block;
+   width: 100%;
+   font-size: 12pt;
+   line-height: 12pt * 2;
+   font-family: Arial;
+
 }
+
 #mobile{
      float: right; 
 }
 .container{
-    margin-left:50px;
-    margin-right: 50px;
-  }
+      background: #f8f4e5;
+      padding: 50px 100px;
+      border-top: 10px solid #f45702;
+}
+
+.container label, input, textarea{
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: Arial;
+}
+
+.container input{
+  margin-bottom: 12pt;
+}
+.container input, textarea, select{
+  border: none;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+.container input:focus, textarea:focus ,select:focus{
+  border: 2px solid #6bd4b1;
+}
+.container select{
+  font-size: 14pt;
+  font-family: Arial;
+  width: 120pt;
+}
+.container h3{
+  font-weight: normal;
+  font-size: 30pt;
+  line-height: 24pt;
+  margin: 0 0 .5em 0;
+  letter-spacing: 2px;
+}
+
+#register{
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: .2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+#register:hover{
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+#register::selection{
+  background: rgb(255, 199, 184);
+}
 
 /*Home page*/
 .information{
@@ -387,26 +452,148 @@ img {vertical-align: middle;}
 
 #student_login{
   height: 60%;
-  width: 50%;
+  width: 30%;
   border: 1px solid white;
   border-radius: 5px;
   margin:auto;
-  background-color: white;
   transform: translateY(200px);
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border-top: 10px solid #f45702;
 }
-.container2{
-  height: 100%;
-  margin: auto;
-  width: 50%;
-  background:none;
+.container label, input, textarea{
+font-size: 12pt;
+line-height: 24pt;
+font-family: Arial;
 }
+
+.container input{
+margin-bottom: 12pt;
+}
+.container input, textarea, select{
+border: none;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: 2px;
+background: #f8f4e5;
+padding-left: 5px;
+outline: none;
+}
+.container input:focus, textarea:focus ,select:focus{
+border: 2px solid #6bd4b1;
+}
+
+/* login */
+
 #login_table{
   /*transform: translateX(60px);*/
   text-align: center;
 
 }
 
+.login-container label, input, textarea{
+font-size: 12pt;
+line-height: 24pt;
+font-family: Arial;
+}
 
 
+.login-container input, textarea, select{
+border: none;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: 2px;
+background: #f8f4e5;
+padding-left: 5px;
+outline: none;
+}
 
+.login-container input:focus, textarea:focus ,select:focus{
+border: 2px solid #6bd4b1;
+}
+
+#student-login{
+  width: 55%;
+  line-height: 28pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: .2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+#student-login:hover{
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+#student-login::selection{
+  background: rgb(255, 199, 184);
+}
+
+/* update-process */
+.updatedisplay{
+  width: 100%;
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border-top: 10px solid #f45702;
+}
+
+.updatedisplay label, input, textarea{
+font-size: 12pt;
+line-height: 24pt;
+font-family: Arial;
+}
+
+.updatedisplay input{
+margin-bottom: 12pt;
+}
+.updatedisplay input, textarea, select{
+border: none;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: 2px;
+background: #f8f4e5;
+padding-left: 5px;
+outline: none;
+}
+.updatedisplay input:focus, textarea:focus ,select:focus{
+border: 2px solid #6bd4b1;
+}
+.updatedisplay select{
+font-size: 14pt;
+font-family: Arial;
+width: 120pt;
+}
+.updatedisplay h3{
+font-weight: normal;
+font-size: 30pt;
+line-height: 24pt;
+margin: 0 0 .5em 0;
+letter-spacing: 2px;
+}
+
+#update-student{
+display: block; 
+line-height: 24pt;
+padding: 0 20px;
+border: none;
+background: #f45702;
+color: white;
+letter-spacing: 2px;
+transition: .2s all ease-in-out;
+border-bottom: 2px solid transparent;
+outline: none;
+}
+
+#update-student:hover{
+background: inherit;
+color: #f45702;
+border-bottom: 2px solid #f45702;
+}
+
+#update-student::selection{
+background: rgb(255, 199, 184);
+}
 

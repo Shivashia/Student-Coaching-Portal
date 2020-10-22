@@ -39,7 +39,7 @@
       </div>
     </div>
   </nav>
-  <div class="container2">
+  <div class="login-container">
     <div id="rightside" class=side>
       <div id="student_login">
         <br>
@@ -59,7 +59,7 @@
               <input type="Password" name="password_login" id="pass1">
               <br>
               <br> 
-              <input type="submit" name="submit" id="submit1" value="Login" style="width: 70px;">
+              <input type="submit" name="submit" id="student-login" value="Login">
               <br>
               <br>
               Dont have an Account?....<a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a>
