@@ -97,7 +97,7 @@ function function_alert($message) {
 if ($result->num_rows> 0) {
   while($row = $result->fetch_assoc()) {
     if($row["password"]==$pass){
-    	header("location:admin.php");
+    	header("location:student-login.php");
     }
     else{
     	function_alert("Invalid password!!");

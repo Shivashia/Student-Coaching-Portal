@@ -47,7 +47,6 @@
           Student Name
         </label>
         <br>
-        <br>
         <div class="your-class">
           <input name="first_name" id="first_name" type="text" placeholder="FirstName" />
           <input name="middle_name" id="middle_name" type="text" placeholder="MiddleName"/>
@@ -82,19 +81,19 @@
           <option value="others">Others</option>
         </select>
         <br>
+        <br>
         <hr>
         <label class="studname">
           Address
         </label>
         <br>
-        <br>
         <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
         <br>
-    
+        <br>
+        <hr>
         <label class="studname">
           Student Email
         </label>
-        <br>
         <br>
         <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
         <br>
@@ -102,7 +101,6 @@
         <label class="studname">
           Contact numbers
         </label>
-        <br>
         <br>
         <div>
           <label>Mobile Number</label>
@@ -114,7 +112,6 @@
         <label class="studname">
           Programming Languages
         </label>
-        <br>
         <br>
         <div class="checkbox checkbox-inline">
             <label>
