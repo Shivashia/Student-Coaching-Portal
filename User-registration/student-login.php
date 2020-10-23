@@ -11,7 +11,7 @@
 <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo2.png"></a>
+        <a href="Homepage.html"><img src="Templates/Images/logo.png" width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
@@ -85,8 +85,17 @@ window.onscroll = ()=>{
 //   dots[slideIndex-1].className += " active";
 // }
 </script>
+<div class="footer"> 
+  <br><hr><br>
+  &copy 2020 Valorant Coaching Classes. ALL RIGHTS RESERVED.
+  <ul>
+    <li><a href=""><img src="Templates/Images/facebook.png"></a></li>
+    <li><a href=""><img src="Templates/Images/linkedin.png"></a></li>
+    <li><a href=""><img src="Templates/Images/twitter.png"></a></li>
+    <li><a href=""><img src="Templates/Images/youtube.png"></a></li>
+    <li><a href=""><img src="Templates/Images/instagram.png"></a></li>
+  </ul>
+  <br><br>
+</div>
 </body>
-<footer>
-	FOOTER
-</footer>
 </html>

@@ -597,3 +597,24 @@ border-bottom: 2px solid #f45702;
 background: rgb(255, 199, 184);
 }
 
+/*Footer CSS*/
+.footer {
+  text-align: center;
+}
+.footer hr{
+  width: 50%;
+  margin: auto;
+}
+.footer ul {
+  display: inline-flex;
+}
+.footer li{
+  list-style: none;
+  margin: 5px 10px 10px 10px;
+}
+.footer li a {
+  border-radius: 50%;
+}
+.footer li a:hover{
+  background-color: white;
+}

@@ -14,119 +14,101 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo2.png"></a>
-      </div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.htmln">About</a></li>
-        <!-- <li><a href="#">Services</a></li> -->
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
-         <!-- <li><a href="#">Contact</a></li> -->
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
+  <div class="content">
+    <div class="logo">
+      <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
     </div>
-  </nav>
+    <ul class="menu-list">
+      <div class="icon cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.htmln">About</a></li>
+      <!-- <li><a href="#">Services</a></li> -->
+      <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
+      <!-- <li><a href="#">Contact</a></li> -->
+      <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
+    </ul>
+    <div class="icon menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
 <div class="bg">
 </div>
-  <div class="about">
+<div class="about">
   <div class="container">
-      <h3>
-      Student Details
-      </h3>
-      <hr>
-      <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php" onsubmit="return validate()">
-        <label class="studname">
-          Student Name
-        </label>
-        <br>
-        <div class="your-class">
-          <input name="first_name" id="first_name" type="text" placeholder="FirstName" />
-          <input name="middle_name" id="middle_name" type="text" placeholder="MiddleName"/>
-          <input name="last_name" id="last_name" type="text" placeholder="LastName" /> 
-        </div>
-        <br><hr>
-        <label class="studname">Password</label>
-        <br>
-        <input type="Password" id="password" name="password">
-        <br><hr>
-        <label class="studname">Confirm Password</label>
-        <br>
-        <input type="Password" id="confirm_password" name="confirm_password">
-        <br><hr>
-        <label class="studname">
-          Birth Date
-        </label>
-        <br>
-        <input type="date" id="birthday" name="birthday" max="2001-12-31">
-        <br><hr>
-        <label class="studname">
-          Gender
-        </label>
-        <br>
-        <select name="gender" id="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="others">Others</option>
-        </select>
-        <br><br><hr>
-        <label class="studname">
-          Address
-        </label>
-        <br>
-        <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
-        <br><br><hr>
-        <label class="studname">
-          Student Email
-        </label>
-        <br>
-        <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
-        <br><hr>
-        <label class="studname">
-          Contact numbers
-        </label>
-        <br>
-        <div>
-          <label>Mobile Number</label>
-          <input type="Number" name="mobno1" id="phnum1">
-          <label>Telephone Number</label>
-          <input type="Number" name="mobno2" id="phnum2">
-        </div>
-        <hr>
-        <label class="studname">
-          Programming Languages
-        </label>
-        <br>
-        <div class="checkbox checkbox-inline">
-            <label>
-              <input name="val1[]" type="checkbox" value="Python" id="checkbox1" onclick="feesgenerate()">
-              Python
-              </label>
-            <label>
-              <input name="val1[]" type="checkbox" value="Java" id="checkbox2" onclick="feesgenerate()">
-              Java
-            </label>
-            <label>
-              <input name="val1[]" type="checkbox" value="R" id="checkbox3" onclick="feesgenerate()">
-              R
-            </label>
-         </div>
-          <div id="fees">
-          </div>
-          <input id="fees2" value = '0' name="paisa" readonly></input>
-          <br><br><hr>
-          <input type="submit" id="register" name="submit2" value="Submit Form" onclick="validate()">
-      </form>
-  </div>
+    <h3>Student Details</h3>
+    <hr><br>
+    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php" onsubmit="return validate()">
+      <label class="studname">Student Name</label>
+      <br>
+      <div class="your-class">
+        <input name="first_name" id="first_name" type="text" placeholder="FirstName" />
+        <input name="middle_name" id="middle_name" type="text" placeholder="MiddleName"/>
+        <input name="last_name" id="last_name" type="text" placeholder="LastName" /> 
       </div>
-      
+      <br><hr><br>
+      <label class="studname">Password</label>
+      <br>
+      <input type="Password" id="password" name="password">
+      <br><hr><br>
+      <label class="studname">Confirm Password</label>
+      <br>
+      <input type="Password" id="confirm_password" name="confirm_password">
+      <br><hr><br>
+      <label class="studname">Birth Date</label>
+      <br>
+      <input type="date" id="birthday" name="birthday" max="2001-12-31">
+      <br><hr><br>
+      <label class="studname">Gender</label>
+      <br>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Others</option>
+      </select>
+      <br><hr><br>
+      <label class="studname">Address</label>
+      <br>
+      <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
+      <br><hr><br>
+      <label class="studname">Student Email</label>
+      <br>
+      <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
+      <br><hr><br>
+      <label class="studname">Contact numbers</label>
+      <br>
+      <div>
+        <label>Mobile Number</label>
+        <input type="Number" name="mobno1" id="phnum1">
+        <label>Telephone Number</label>
+        <input type="Number" name="mobno2" id="phnum2">
+      </div>
+      <hr>
+      <label class="studname">Programming Languages</label>
+      <br>
+      <div class="checkbox checkbox-inline">
+        <label>
+          <input name="val1[]" type="checkbox" value="Python" id="checkbox1" onclick="feesgenerate()">
+            Python
+        </label>
+        <label>
+          <input name="val1[]" type="checkbox" value="Java" id="checkbox2" onclick="feesgenerate()">
+            Java
+        </label>
+        <label>
+          <input name="val1[]" type="checkbox" value="R" id="checkbox3" onclick="feesgenerate()">
+            R
+        </label>
+      </div>
+      <div id="fees" style="font-weight: bold;"></div>
+      <input id="fees2" value = '0' name="paisa" readonly></input>
+      <br><hr><br>
+      <input type="submit" id="register" name="submit2" value="Submit Form" onclick="validate()">
+    </form>
+  </div>
+</div>  
 </body>
 <script type="text/javascript">
 const body = document.querySelector("body");
@@ -253,31 +235,31 @@ function validate(){
 
 <?php
 if(isset($_POST['submit2'])){
-$f_nm = $_POST["first_name"];
-$m_nm = $_POST["middle_name"];
-$l_nm = $_POST["last_name"];
-$pass = $_POST["password"];
-$add = $_POST["address"];
-$m_no = $_POST["mobno1"];
-$t_no = $_POST["mobno2"];
-$dob = $_POST["birthday"];
-$lang = implode(",",$_POST['val1']);
-$gen= $_POST["gender"];
-$em= $_POST["email"];
-$fee=$_POST["paisa"];
-$conn = mysqli_connect("localhost", "root", "", "valorant");
+  $f_nm = $_POST["first_name"];
+  $m_nm = $_POST["middle_name"];
+  $l_nm = $_POST["last_name"];
+  $pass = $_POST["password"];
+  $add = $_POST["address"];
+  $m_no = $_POST["mobno1"];
+  $t_no = $_POST["mobno2"];
+  $dob = $_POST["birthday"];
+  $lang = implode(",",$_POST['val1']);
+  $gen= $_POST["gender"];
+  $em= $_POST["email"];
+  $fee=$_POST["paisa"];
+  $conn = mysqli_connect("localhost", "root", "", "valorant");
 
-	if (!$conn) {
+  if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
     }
   echo "p2";
-$sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
-                dob='$dob', gender='$gen', address='$add', email='$em', mob_no='$m_no', tele_no='$t_no', subjects='$lang',fee='$fee'";
-if($conn->query($sql1) === true){
-   echo "Inserted into table successfully.";
-} 
-else{
-   echo "ERROR: Could not able to execute $sql1. " . $conn->error;
-}
+  $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
+                  dob='$dob', gender='$gen', address='$add', email='$em', mob_no='$m_no', tele_no='$t_no', subjects='$lang',fee='$fee'";
+  if($conn->query($sql1) === true){
+     echo "Inserted into table successfully.";
+  } 
+  else{
+     echo "ERROR: Could not able to execute $sql1. " . $conn->error;
+  }
 }
 ?>

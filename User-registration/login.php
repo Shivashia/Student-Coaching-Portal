@@ -21,7 +21,7 @@
   <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo2.png"></a>
+        <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
@@ -89,25 +89,23 @@ $sql3 = "SELECT * FROM student_table where email='$email' ";
 $result = $conn->query($sql3);
 
 function function_alert($message) { 
-  echo "<script>
-    alert('$message');
-    window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php';
-    </script>"; 
-  }
-if ($result->num_rows> 0) {
-  while($row = $result->fetch_assoc()) {
-    if($row["password"]==$pass){
-    	header("location:student-login.php");
-    }
-    else{
-    	function_alert("Invalid password!!");
-    }
-  }
+	echo "<script>
+	    alert('$message');
+	    window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php';
+	    </script>"; 
+	}
+	if ($result->num_rows> 0) {
+	  while($row = $result->fetch_assoc()) {
+	    if($row["password"]==$pass){
+	    	header("location:student-login.php");
+	    }
+	    else{
+	    	function_alert("Invalid password!!");
+	    }
+	  }
+	}
+	else{
+  		function_alert("Invalid email!!");
+	}
 }
-else{
-  function_alert("Invalid email!!");
-}
-}
-
-
 ?>

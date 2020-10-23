@@ -9,7 +9,7 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
 <!DOCTYPE html>
 <html>
 <head>
-<title>Delete employee data</title>
+<title>Student data</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
@@ -81,7 +81,7 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
   <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo2.png"></a>
+        <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
@@ -148,6 +148,18 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
     ?>
 </table>
   </div>
+  <footer class="footer"> 
+  <br><hr><br>
+  &copy 2020 Valorant Coaching Classes. ALL RIGHTS RESERVED.
+  <ul>
+    <li><a href=""><img src="Templates/Images/facebook.png"></a></li>
+    <li><a href=""><img src="Templates/Images/linkedin.png"></a></li>
+    <li><a href=""><img src="Templates/Images/twitter.png"></a></li>
+    <li><a href=""><img src="Templates/Images/youtube.png"></a></li>
+    <li><a href=""><img src="Templates/Images/instagram.png"></a></li>
+  </ul>
+  <br><br>
+</footer>
 </body>
 </html>
 
