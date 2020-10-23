@@ -252,17 +252,15 @@ if(isset($_POST['submit2'])){
   if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
     }
-<<<<<<< Updated upstream
   echo "p2";
   $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
                   dob='$dob', gender='$gen', address='$add', email='$em', mob_no='$m_no', tele_no='$t_no', subjects='$lang',fee='$fee'";
   if($conn->query($sql1) === true){
-     echo "Inserted into table successfully.";
+     echo "Registered successfully.";
   } 
   else{
      echo "ERROR: Could not able to execute $sql1. " . $conn->error;
   }
-=======
     function function_alert() { 
       echo "<script>
         alert('Inserted Successfully');
@@ -277,6 +275,5 @@ if($conn->query($sql1) === true){
 else{
    echo "ERROR: Could not able to execute $sql1. " . $conn->error;
 }
->>>>>>> Stashed changes
 }
 ?>
