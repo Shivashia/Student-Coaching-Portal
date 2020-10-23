@@ -52,25 +52,21 @@
           <input name="middle_name" id="middle_name" type="text" placeholder="MiddleName"/>
           <input name="last_name" id="last_name" type="text" placeholder="LastName" /> 
         </div>
-        <br>
-        <hr>
+        <br><hr>
         <label class="studname">Password</label>
         <br>
         <input type="Password" id="password" name="password">
-        <br>
-        <hr>
+        <br><hr>
         <label class="studname">Confirm Password</label>
         <br>
         <input type="Password" id="confirm_password" name="confirm_password">
-        <br>
-        <hr>
+        <br><hr>
         <label class="studname">
           Birth Date
         </label>
         <br>
         <input type="date" id="birthday" name="birthday" max="2001-12-31">
-        <br>
-        <hr>
+        <br><hr>
         <label class="studname">
           Gender
         </label>
@@ -80,24 +76,19 @@
           <option value="female">Female</option>
           <option value="others">Others</option>
         </select>
-        <br>
-        <br>
-        <hr>
+        <br><br><hr>
         <label class="studname">
           Address
         </label>
         <br>
         <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
-        <br>
-        <br>
-        <hr>
+        <br><br><hr>
         <label class="studname">
           Student Email
         </label>
         <br>
         <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
-        <br>
-        <hr>
+        <br><hr>
         <label class="studname">
           Contact numbers
         </label>
@@ -130,9 +121,7 @@
           <div id="fees">
           </div>
           <input id="fees2" value = '0' name="paisa" readonly></input>
-          <br>
-          <br>
-          <hr>
+          <br><br><hr>
           <input type="submit" id="register" name="submit2" value="Submit Form" onclick="validate()">
       </form>
   </div>
@@ -159,34 +148,37 @@ window.onscroll = ()=>{
   }
 
 function feesgenerate() {
-        var chkbox_1 = document.getElementById('checkbox1');
-        var chkbox_2 = document.getElementById('checkbox2');
-        var chkbox_3 = document.getElementById('checkbox3');
-        var sum = 0;
-        var msg = "";
-        if(chkbox_1.checked == true) {
-          sum += 25000;
-          msg += "25000";
-        }
-        if(chkbox_2.checked == true) {
-          sum += 30000;
-          if(chkbox_1.checked == true) {
-            msg += " + ";
-          }
-          msg += "30000";
-        }
-        if(chkbox_3.checked == true) {
-          sum += 15000;
-          if(chkbox_1.checked == true || chkbox_2.checked == true) {
-            msg += " + ";
-          }
-          msg += "15000"
-        }
-        msg += " = ";
-        document.getElementById('fees').innerHTML = msg;
-        document.getElementById('fees2').innerHTML = sum;
-        document.getElementById('fees2').value = sum;
+    var chkbox_1 = document.getElementById('checkbox1');
+    var chkbox_2 = document.getElementById('checkbox2');
+    var chkbox_3 = document.getElementById('checkbox3');
+    var sum = 0;
+    var msg = "";
+    if(chkbox_1.checked == true) {
+      sum += 25000;
+      msg += "25000";
+    }
+    if(chkbox_2.checked == true) {
+      sum += 30000;
+      if(chkbox_1.checked == true) {
+        msg += " + ";
       }
+      msg += "30000";
+    }
+    if(chkbox_3.checked == true) {
+      sum += 15000;
+      if(chkbox_1.checked == true || chkbox_2.checked == true) {
+        msg += " + ";
+      }
+      msg += "15000"
+    }
+    if(chkbox_1.checked == false && chkbox_2.checked == false && chkbox_3.checked == false)
+    	msg = "";
+    else
+    	msg += " = ";
+    document.getElementById('fees').innerHTML = msg;
+    document.getElementById('fees2').innerHTML = sum;
+    document.getElementById('fees2').value = sum;
+}
 function validate(){
     var password_regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$/;
     var fn = document.getElementById("first_name").value;
