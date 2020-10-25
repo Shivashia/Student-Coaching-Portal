@@ -72,9 +72,6 @@
     </div>
   </div>
 </body>
-<footer>
-	FOOTER
-</footer>
 </html>
 <?php
 if (isset($_POST['submit']))

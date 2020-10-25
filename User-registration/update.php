@@ -150,6 +150,7 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
   </div>
   <footer class="footer"> 
   <br><hr><br>
+  <img src="Templates/Images/logo.png" width="75">
   &copy 2020 Valorant Coaching Classes. ALL RIGHTS RESERVED.
   <ul>
     <li><a href=""><img src="Templates/Images/facebook.png"></a></li>

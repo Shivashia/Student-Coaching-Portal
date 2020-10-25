@@ -13,7 +13,7 @@
       border-radius: 10px;
       border-style: solid;
       border-width: 5px;
-      background-color: #573FA6;
+      background-color: #A3A3A3;
     }
     #pydetails{
       border-color: red;
@@ -69,74 +69,99 @@
 </div>
 
 <div class="about">
-    <div class="content">
-      <div class="title">Welcome to Valorant Coaching</div>
+  <div class="content">
+    <div class="title">Dashboard</div>
       <div id="pydetails" class="details">
         <section>
-      <aside>
-        <video src="Resources/py_tutorial.mp4" controls width="320" height="180">
-          <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
-        </video>
-      </aside>
-      <article>
-        <h2>Gameplay</h2>
-        World of Warships is a tactical, slow-paced shooter with two basic types of armament: ship guns and torpedoes. The gameplay is team-based, and allows players to work as a team. Within a team divisions can be established to allow a group of up to three players to join and fight battles together. The player's team can fight against other players (PvP) or against the AI (PvE) in three battle modes: Standard, Domination, and Epicenter. Each mode is scored on a points system.
-        <br>
-        The warships presented in the game cover periods from the early 20th century, at the dawn of dreadnought battleships, up to warships from the 1950s, including ships that were planned but never put into production. The game has four different types of ships: destroyers, cruisers, battleships, and aircraft carriers. Submarines have been added to the game as part of testing as of update 0.9.4.
-      </article>
-
-      <article>
-        <h2>Release</h2>
-        On August 16, 2011, the company website of Wargaming, developer and publisher of World of Tanks and World of Warplanes, announced World of Battleships, a free-to-play naval action MMO, intended to complete the World of war trilogy developed by the company. On August 2, 2012, the game was renamed World of Warships. After a petition opened by South Korean players was signed 40,000 times, Wargaming removed the Rising Sun Flag from Imperial Japanese warships in July 2013. After that, more than 12,000 signatures were gathered requesting reimplementation of the Rising Sun Flag, but the decision was not overturned. On November 14, 2013, the game entered closed alpha testing.
-      </article>
-    </section>
-      
+          <aside>
+            <video src="Resources/py_tutorial.mp4" controls width="320" height="180">
+              <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+            </video>
+          </aside>
+          <article>
+            <h2>Syllabus</h2><br>
+            <h4>1. Python Fundamentals -</h4>
+            <h4>2. Object Oriented Programming with Python -</h4>
+            <h4>3. Regular Expressions and Date & Time in Python -</h4>
+            <h4>4. GUI Development using Python -</h4>
+            <h4>5. Database Connectivity and Python -</h4>
+            <h4>6. Data Science using Python -</h4>
+          </article>
+          <article>
+            <br><h2>Course Outcome</h2><br>
+            After completion of the course, students will be able to -<br>
+            <ol style="padding-left: 35px">
+              <li>Implement the use of basic Python syntax</li>
+              <li>Implement Object oriented programming in Python</li>
+              <li>Create GUI in Python</li>
+              <li>Implementat database connectivity in Python</li>
+            </ol>
+          </article>
+        </section>
       </div>
       <br>
       <div id="javadetails" class="details">
         <section>
-      <aside>
-        <video src="Resources/Java_tut.mp4" controls width="320" height="180">
-          <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
-        </video>
-      </aside>
-      <article>
-        <h2>Gameplay</h2>
-        World of Warships is a tactical, slow-paced shooter with two basic types of armament: ship guns and torpedoes. The gameplay is team-based, and allows players to work as a team. Within a team divisions can be established to allow a group of up to three players to join and fight battles together. The player's team can fight against other players (PvP) or against the AI (PvE) in three battle modes: Standard, Domination, and Epicenter. Each mode is scored on a points system.
-        <br>
-        The warships presented in the game cover periods from the early 20th century, at the dawn of dreadnought battleships, up to warships from the 1950s, including ships that were planned but never put into production. The game has four different types of ships: destroyers, cruisers, battleships, and aircraft carriers. Submarines have been added to the game as part of testing as of update 0.9.4.
-      </article>
-
-      <article>
-        <h2>Release</h2>
-        On August 16, 2011, the company website of Wargaming, developer and publisher of World of Tanks and World of Warplanes, announced World of Battleships, a free-to-play naval action MMO, intended to complete the World of war trilogy developed by the company. On August 2, 2012, the game was renamed World of Warships. After a petition opened by South Korean players was signed 40,000 times, Wargaming removed the Rising Sun Flag from Imperial Japanese warships in July 2013. After that, more than 12,000 signatures were gathered requesting reimplementation of the Rising Sun Flag, but the decision was not overturned. On November 14, 2013, the game entered closed alpha testing.
-      </article>
-    </section>
+          <aside>
+            <video src="Resources/Java_tut.mp4" controls width="320" height="180">
+              <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+            </video>
+          </aside>
+          <article>
+            <h2>Syllabus</h2><br>
+            <h4>1. Programming Languages -</h4>
+            <h4>2. Object Oriented Programming -</h4>
+            <h4>3. Classes & Objects -</h4>
+            <h4>4. Pillars Of Object Oriented Programming -</h4>
+            <h4>5. OOPS concepts and terminology -</h4>
+            <h4>6. Encapsulation & Examples -</h4>
+            <h4>7. Abstraction & Examples -</h4>
+            <h4>8. Inheritance -</h4>
+          </article>
+          <article>
+            <br><h2>Course Outcome</h2><br>
+            After completion of the course, students will be able to -<br>
+            <ol style="padding-left: 35px">
+              <li>Use an integrated development environment to write, compile, run, and test simple object-oriented Java programs.</li>
+              <li>Read and make elementary modifications to Java programs that solve real-world problems.</li>
+              <li>Validate input in a Java program.</li>
+              <li>Identify and fix defects and common security issues in code.</li>
+            </ol>
+          </article>
+        </section>
       </div>
       <br>
       <div id="rdetails" class="details">
         <section>
-      <aside>
-        <video src="Resources/R_tut.mp4" controls width="320" height="180">
-          <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
-        </video>
-      </aside>
-      <article>
-        <h2>Gameplay</h2>
-        World of Warships is a tactical, slow-paced shooter with two basic types of armament: ship guns and torpedoes. The gameplay is team-based, and allows players to work as a team. Within a team divisions can be established to allow a group of up to three players to join and fight battles together. The player's team can fight against other players (PvP) or against the AI (PvE) in three battle modes: Standard, Domination, and Epicenter. Each mode is scored on a points system.
-        <br>
-        The warships presented in the game cover periods from the early 20th century, at the dawn of dreadnought battleships, up to warships from the 1950s, including ships that were planned but never put into production. The game has four different types of ships: destroyers, cruisers, battleships, and aircraft carriers. Submarines have been added to the game as part of testing as of update 0.9.4.
-      </article>
-
-      <article>
-        <h2>Release</h2>
-        On August 16, 2011, the company website of Wargaming, developer and publisher of World of Tanks and World of Warplanes, announced World of Battleships, a free-to-play naval action MMO, intended to complete the World of war trilogy developed by the company. On August 2, 2012, the game was renamed World of Warships. After a petition opened by South Korean players was signed 40,000 times, Wargaming removed the Rising Sun Flag from Imperial Japanese warships in July 2013. After that, more than 12,000 signatures were gathered requesting reimplementation of the Rising Sun Flag, but the decision was not overturned. On November 14, 2013, the game entered closed alpha testing.
-      </article>
-    </section>
+          <aside>
+            <video src="Resources/R_tut.mp4" controls width="320" height="180">
+              <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+            </video>
+          </aside>
+          <article>
+            <h2>Syllabus</h2><br>
+            <h4>1. General Introduction into the R Ecosystem -</h4>
+            <h4>2. Demonstration of a Data Analysis Project in R -</h4>
+            <h4>3. Brief Overview on R Coding Tools -</h4>
+            <h4>4. R Syntax Basics -</h4>
+            <h4>5. The Power of R -</h4>
+            <h4>6. A Systematic Introduction into Data Types -</h4>
+          </article>
+          <article>
+            <br><h2>Course Outcome</h2><br>
+            Students will be familiar to the R ecosystem and learn how to use R for the most common data analysis tasks, including loading, cleaning, transforming, summarizing and visualizing data.<br>
+            <!-- <ol style="padding-left: 35px">
+              <li>Implement the use of basic Python syntax</li>
+              <li>Implement Object oriented programming in Python</li>
+              <li>Create GUI in Python</li>
+              <li>Implementat database connectivity in Python</li>
+            </ol> -->
+          </article>
+        </section>
       </div>
       <br>
+    </div>
   </div>
-</div>
 <script type="text/javascript">
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
@@ -156,7 +181,7 @@ window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
 
-  document.getElementById("pydetails").style.display="none";
+  // document.getElementById("pydetails").style.display="none";
 
 
 // var slideIndex = 1;
@@ -188,6 +213,7 @@ window.onscroll = ()=>{
 </script>
 <div class="footer"> 
   <br><hr><br>
+  <img src="Templates/Images/logo.png" width="75">
   &copy 2020 Valorant Coaching Classes. ALL RIGHTS RESERVED.
   <ul>
     <li><a href=""><img src="Templates/Images/facebook.png"></a></li>
