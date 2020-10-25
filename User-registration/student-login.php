@@ -68,7 +68,7 @@ session_start();
         <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
         <!-- <li><a href="#">Services</a></li> -->
         <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li> -->
-        <li><a><?php echo $first_name; ?></a></li>
+        <li><a>Hello, <?php echo $first_name; ?></a></li>
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
@@ -112,6 +112,10 @@ session_start();
               <li>Implementat database connectivity in Python</li>
             </ol>
           </article>
+          <br>
+          <hr>
+          <br>
+          <a href="Resources/python_tutorial.pdf" download>Download resource pdf</a>
         </section>
       </div>
       <br>
@@ -146,6 +150,10 @@ session_start();
               <li>Identify and fix defects and common security issues in code.</li>
             </ol>
           </article>
+          <br>
+          <hr>
+          <br>
+          <a href="Resources/java_tutorial.pdf" download>Download resource pdf</a>
         </section>
       </div>
       <br>
@@ -178,6 +186,10 @@ session_start();
               <li>Implementat database connectivity in Python</li>
             </ol> -->
           </article>
+          <br>
+          <hr>
+          <br>
+          <a href="Resources/R-tutorial.pdf" download>Download resource pdf</a>
         </section>
       </div>
       <br>
