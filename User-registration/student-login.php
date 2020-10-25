@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+{
+  $first_name= $_SESSION["first"];
+  $subs = $_SESSION["subs"];
+  $subjects= explode(",",$subs);
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +14,7 @@
 	<link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
     .details{
-      width: 90%;
+      width: 100%;
       margin: auto;
       padding: 15px 15px 15px 15px;
       border-radius: 10px;
@@ -17,8 +24,9 @@
     }
     #pydetails{
       border-color: red;
+      display: none;
     }
-    /*#pydetails.video{
+    /* #pydetails.video{
       float: left;
     }
     #pydetails.texts{
@@ -26,14 +34,16 @@
     }*/
     #javadetails{
       border-color: yellow;
+      display: none;
     }
     #rdetails{
       border-color: green;
+      display: none;
     }
     section {
       border-radius: 5px;
       padding-top: 10px;
-        padding-left: 4px;
+      padding-left: 4px;
       font-size: 20px;
     }
     aside {
@@ -58,7 +68,8 @@
         <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
         <!-- <li><a href="#">Services</a></li> -->
         <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li> -->
-        <li><a href="#">Hello, Shiv</a></li>
+        <li><a><?php echo $first_name; ?></a></li>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -70,15 +81,19 @@
 
 <div class="about">
   <div class="content">
-    <div class="title">Dashboard</div>
+    <div  style=" padding: 30px 0; text-align:center; font-size: 38px; font-weight: 700;">Dashboard</div>
       <div id="pydetails" class="details">
         <section>
+        <h1 style=" text-align:center; color:red; font-size: 38px; font-weight: 700;">Python</h1><br>
+          <hr>
+          <br>
           <aside>
-            <video src="Resources/py_tutorial.mp4" controls width="320" height="180">
+            <video src="Resources/py_tutorial.mp4" controls width="500" >
               <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
             </video>
           </aside>
           <article>
+         
             <h2>Syllabus</h2><br>
             <h4>1. Python Fundamentals -</h4>
             <h4>2. Object Oriented Programming with Python -</h4>
@@ -102,8 +117,11 @@
       <br>
       <div id="javadetails" class="details">
         <section>
+        <h1 style=" text-align:center; color:yellow; font-size: 38px; font-weight: 700;">Java</h1><br>
+          <hr>
+          <br>
           <aside>
-            <video src="Resources/Java_tut.mp4" controls width="320" height="180">
+            <video src="Resources/Java_tut.mp4" controls width="500">
               <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
             </video>
           </aside>
@@ -133,8 +151,11 @@
       <br>
       <div id="rdetails" class="details">
         <section>
+        <h1 style=" text-align:center; color:green; font-size: 38px; font-weight: 700;">R</h1><br>
+          <hr>
+          <br>
           <aside>
-            <video src="Resources/R_tut.mp4" controls width="320" height="180">
+            <video src="Resources/R_tut.mp4" controls width="500">
               <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
             </video>
           </aside>
@@ -181,35 +202,6 @@ window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
 
-  // document.getElementById("pydetails").style.display="none";
-
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-// }
 </script>
 <div class="footer"> 
   <br><hr><br>
@@ -226,3 +218,20 @@ window.onscroll = ()=>{
 </div>
 </body>
 </html>
+<?php
+if (in_array('Python', $subjects)){
+  echo "<script>
+        document.getElementById('pydetails').style.display='block'; 
+        </script>";
+}
+if (in_array('Java', $subjects)){
+  echo "<script>
+        document.getElementById('javadetails').style.display='block'; 
+        </script>";
+}
+if (in_array('R', $subjects)){
+  echo "<script>
+        document.getElementById('rdetails').style.display='block'; 
+        </script>";
+}
+?>

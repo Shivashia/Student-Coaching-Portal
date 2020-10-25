@@ -93,8 +93,16 @@ function function_alert($message) {
 	}
 	if ($result->num_rows> 0) {
 	  while($row = $result->fetch_assoc()) {
+      $first_name=$row["first_name"];
+      $subs=$row["subjects"];
 	    if($row["password"]==$pass){
-	    	header("location:student-login.php");
+        session_start();
+	    {
+        $_SESSION["first"]=$first_name;
+        $_SESSION["subs"]=$subs;
+		    header("location:student-login.php");
+		}
+	    	
 	    }
 	    else{
 	    	function_alert("Invalid password!!");
