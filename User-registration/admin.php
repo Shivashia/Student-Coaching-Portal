@@ -5,15 +5,53 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
-    #adminform{
-      height: 60%;
-      width: 50%;
-      border: 1px solid white;
-      border-radius: 5px;
-      margin:auto;
-      background-color: white;
-      transform: translateY(200px);
+    .side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
     }
+    .sidebar {
+      position: absolute;
+      left: 0;
+      top: 150px;
+      width: 20%;
+      height: 100%;
+      background: #312450;
+      font-size: 12pt ;
+      background: #5e42a6;
+} 
+
+    .sidenav {
+      position: relative;
+      margin: 0 15%;
+      text-align: center;
+      top: 35%;
+      transform: translateY(-50%);
+      font-weight: bold;
+    }
+
+    .sidenav ul {
+      list-style: none;
+    }  
+    .sidenav li {
+      position: relative;
+      margin: 3.2em 0;
+    }    
+    .sidenav a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: orange;
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    .sidenav a:hover{
+      color: red;
+      transform: scale(1.3);
+    }    
   </style>
 </head>
 <body>
@@ -28,9 +66,6 @@
         </div>
         <li><a href="Homepage.html">Home</a></li>
         <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
-        <!-- <li><a href="#">Services</a></li> -->
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
-        <!-- <li><a href="#">Contact</a></li> -->
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
@@ -43,13 +78,18 @@
 
 <div class="about">
     <div class="content">
+    <aside class="sidebar">
+      <nav class="sidenav">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">New Student</a></li>
+          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li> 
+        </ul>
+      </nav>
+    </aside>
+    <section class="side">
       <div class="title">Administrator</div>
-    <div id="adminform">
-      <form action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/admin.php" method= "POST">
-        <input type = "submit" name = "register" id="register" value="New Student"/>
-        <input type = "submit" name = "update" id="update" value="View Student"/>
-    </form>
-    </div>
+    </section>
   </div>
 </div>
 <script type="text/javascript">
@@ -73,12 +113,3 @@ window.onscroll = ()=>{
 </script>
 </body>
 </html>
-
-<?php
-if(isset($_POST['register'])){
-    header("location:register.php");
-}
-if(isset($_POST['update'])){
-    header("location:update.php");
-}
-?>
