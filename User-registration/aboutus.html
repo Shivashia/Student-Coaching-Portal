@@ -4,6 +4,23 @@
   <title>Valorant</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
+  <style type="text/css">
+    article {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 30px;
+      color: #f45702;
+    }
+    .informationmembers {
+      padding: 20px 20px 20px 20px;
+      width: 80%;
+      margin: auto;
+      background-color: #f8f4e5;
+      border-radius: 10px;
+
+    }
+  </style>
 </head>
 <body>
 <nav class="navbar">
@@ -31,34 +48,28 @@
 </div>
 
 <div class="about">
-    <div class="content">
-      <div class="title">Welcome to Valorant Coaching</div>
-      <div class="slideshow-container">
-
+  <div class="content">
+    <div class="title">Welcome to Valorant Coaching</div>
+    <div class="slideshow-container">
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
           <img src="Templates/Images/banner1.png" style="width:100%">
           <div class="text">Infrastructure</div>
         </div>
-
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
           <img src="Templates/Images/banner2.png" style="width:100%">
           <div class="text">Campus</div>
         </div>
-
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
           <img src="Templates/Images/banner3.png" style="width:100%">
           <div class="text">Interior</div>
         </div>
-
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
       </div>
-<br>
-
+      <br>
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
@@ -66,8 +77,9 @@
       </div>
     </div>
   </div>
-<div class="informationmembers" style="padding: 10px 10px 10px 10px; width: 80%; margin: auto;">
-    <div class="member">
+<br><br>
+<div class="informationmembers">
+  <div class="member">
     <p><h2>About Valorant Coaching</h2></p><br>
     <article>
         Valorant Coaching Classes was established in Mumbai in the year 2020. It was founded by 4 people - Shiv Avashia, Bhavik Bolya, Ananay Agarwal and Samar Bansod. 
@@ -76,48 +88,39 @@
         Valorant today, with its state-of-the-art labs and world class infrastructure stands a live testimony to the steady realization of this vision.
     </article>
   </div>
-  <br><br>
+  <br><hr><br>
   <div class="member">
     <p><h2>Our Courses</h2></p><br>
-    <p>
-      Python, Java and R
-    </p>
+    <article>Python, Java and R</article>
   </div>
-  <br><br>
-  <div class="member">
-    
-    <hr>
-    <br>
-    <p>
-      <h3 style="color: #1E1B08">What Makes Us Different?</h3>
-      <h4 style="color: #1E1B08">Personalised Learning</h4>
-      <br>
+  <div class="member">    
+    <br><hr><br>
+    <p><h2>What Makes Us Different?</h2></p><br>
+    <article>
       Our niche is creating personalised learning experiences for every type of learner. The Valorant way of learning provides students a learning platform where they can learn, engage and be excited about charting their own path to discover the world. Valorant - The Learning Platform brings together the best teachers, technology, content, media for creating a seamless, world class learning experience for each and every student.
-          </p>
+    </article>
   </div>
   <div class="member">
-   
-    <hr>
-    <br>
-    <p>
-      <h3 style="color: #1E1B08">Technology Enabled Learning</h3>
-      <br>
-      At Valorant, we leverage technology to merge best practices like use of videos, engaging content and quizzes with the best teachers so that every child across the globe has access to the best learning experiences.
-      <br>
-      <br>
-      <h4 style="color: #1E1B08">Key features of the learning program:</h4>
-
+    <br><hr><br>
+    <p><h2>Technology Enabled Learning</h2></p><br>
+      <article>
+        At Valorant, we leverage technology to merge best practices like use of videos, engaging content and quizzes with the best teachers so that every child across the globe has access to the best learning experiences.
+      </article>
+      <br><hr><br>
+    <p><h2>Key features of the learning program:</h2></p><br>
+    <article>
       Technology Enabled Learning
       At Valorant, we leverage technology to merge best practices like use of videos, engaging content and quizzes with the best teachers so that every child across the globe has access to the best learning experiences.
-      <br>
-      <br>
-      <h4 style="color: #1E1B08">Key features:</h4>
-      <ol>
+    </article>
+    <br><hr><br>
+    <p><h2>Key features:</h2></p><br>
+    <article>
+      <ol style="padding-left: 25px">
         <li> Interactive and engaging learning modules</li>
         <li>Visually rich content to enable conceptual clarity and lifelong term retention</li>
         <li>Personalised learning programs designed for every student, enabled by the power of data science</li>
       </ol>
-    </p>
+    </article>
   </div>
 </div>
 <script type="text/javascript">
@@ -125,6 +128,7 @@ const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
+
 menuBtn.onclick = ()=>{
   navbar.classList.add("show");
   menuBtn.classList.add("hide");
@@ -137,8 +141,7 @@ cancelBtn.onclick = ()=>{
 }
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-  }
-
+}
 
 var slideIndex = 1;
 showSlides(slideIndex);

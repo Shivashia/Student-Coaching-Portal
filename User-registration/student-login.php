@@ -95,12 +95,12 @@ session_start();
           <article>
          
             <h2>Syllabus</h2><br>
-            <h4>1. Python Fundamentals -</h4>
-            <h4>2. Object Oriented Programming with Python -</h4>
-            <h4>3. Regular Expressions and Date & Time in Python -</h4>
-            <h4>4. GUI Development using Python -</h4>
-            <h4>5. Database Connectivity and Python -</h4>
-            <h4>6. Data Science using Python -</h4>
+            <h4>1. Python Fundamentals</h4>
+            <h4>2. Object Oriented Programming with Python</h4>
+            <h4>3. Regular Expressions and Date & Time in Python</h4>
+            <h4>4. GUI Development using Python</h4>
+            <h4>5. Database Connectivity and Python</h4>
+            <h4>6. Data Science using Python</h4>
           </article>
           <article>
             <br><h2>Course Outcome</h2><br>
@@ -131,14 +131,14 @@ session_start();
           </aside>
           <article>
             <h2>Syllabus</h2><br>
-            <h4>1. Programming Languages -</h4>
-            <h4>2. Object Oriented Programming -</h4>
-            <h4>3. Classes & Objects -</h4>
-            <h4>4. Pillars Of Object Oriented Programming -</h4>
-            <h4>5. OOPS concepts and terminology -</h4>
-            <h4>6. Encapsulation & Examples -</h4>
-            <h4>7. Abstraction & Examples -</h4>
-            <h4>8. Inheritance -</h4>
+            <h4>1. Programming Languages</h4>
+            <h4>2. Object Oriented Programming</h4>
+            <h4>3. Classes & Objects</h4>
+            <h4>4. Pillars Of Object Oriented Programming</h4>
+            <h4>5. OOPS concepts and terminology</h4>
+            <h4>6. Encapsulation & Examples</h4>
+            <h4>7. Abstraction & Examples</h4>
+            <h4>8. Inheritance</h4>
           </article>
           <article>
             <br><h2>Course Outcome</h2><br>
@@ -169,12 +169,12 @@ session_start();
           </aside>
           <article>
             <h2>Syllabus</h2><br>
-            <h4>1. General Introduction into the R Ecosystem -</h4>
-            <h4>2. Demonstration of a Data Analysis Project in R -</h4>
-            <h4>3. Brief Overview on R Coding Tools -</h4>
-            <h4>4. R Syntax Basics -</h4>
-            <h4>5. The Power of R -</h4>
-            <h4>6. A Systematic Introduction into Data Types -</h4>
+            <h4>1. General Introduction into the R Ecosystem</h4>
+            <h4>2. Demonstration of a Data Analysis Project in R</h4>
+            <h4>3. Brief Overview on R Coding Tools</h4>
+            <h4>4. R Syntax Basics</h4>
+            <h4>5. The Power of R</h4>
+            <h4>6. A Systematic Introduction into Data Types</h4>
           </article>
           <article>
             <br><h2>Course Outcome</h2><br>
