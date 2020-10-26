@@ -1,8 +1,6 @@
-
 <?php
 if (isset($_POST['submit']))
  {
-
 	// connect to database
 	$conn = mysqli_connect("localhost", "root", "", "valorant");
 
@@ -13,8 +11,6 @@ if (isset($_POST['submit']))
 $pass=$_POST['password1'];
 $sql3 = "SELECT * FROM login where username='$user' ";  
 $result = $conn->query($sql3);
-
- 
 
 if ($result->num_rows> 0) {
   // output data of each row
@@ -28,6 +24,5 @@ if ($result->num_rows> 0) {
   }
 }
 }
-
 
 ?>

@@ -4,13 +4,6 @@
   <title>Valorant</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
-  <style>
-    #con{
-      background: #f8f4e5
-      padding: 50px 100px
-      border-top: 10px solid #f45702
-  } 
-  </style>
 </head>
 <body>
 <nav class="navbar">
@@ -24,11 +17,7 @@
       </div>
       <li><a href="Homepage.html">Home</a></li>
       <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.htmln">About</a></li>
-      <!-- <li><a href="#">Services</a></li> -->
-      <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li> -->
-      <!-- <li><a href="#">Contact</a></li> -->
       <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php">Login</a></li>
-      <!-- <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li> -->
     </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
@@ -69,11 +58,11 @@
         <option value="female">Female</option>
         <option value="others">Others</option>
       </select>
-      <br><hr><br>
+      <br><br><hr><br>
       <label class="studname">Address</label>
       <br>
       <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
-      <br><hr><br>
+      <br><br><hr><br>
       <label class="studname">Student Email</label>
       <br>
       <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
@@ -253,16 +242,7 @@ if(isset($_POST['submit2'])){
   if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
     }
-  echo "p2";
-  $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
-                  dob='$dob', gender='$gen', address='$add', email='$em', mob_no='$m_no', tele_no='$t_no', subjects='$lang',fee='$fee'";
-  if($conn->query($sql1) === true){
-     echo "Registered successfully.";
-  } 
-  else{
-     echo "ERROR: Could not able to execute $sql1. " . $conn->error;
-  }
-    function function_alert() { 
+  function function_alert() { 
       echo "<script>
         alert('Inserted Successfully');
         window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php';

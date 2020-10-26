@@ -18,9 +18,8 @@
       top: 150px;
       width: 20%;
       height: 100%;
-      background: #312450;
+      background: #f8f4e5;
       font-size: 12pt ;
-      background: #5e42a6;
 } 
 
     .sidenav {
@@ -44,7 +43,7 @@
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 0.4em;
-      color: orange;
+      color: #f45702;
       display: block;
       transition: all ease-out 300ms;
     }
