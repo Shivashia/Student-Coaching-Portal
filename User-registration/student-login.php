@@ -20,10 +20,10 @@ session_start();
       border-radius: 10px;
       border-style: solid;
       border-width: 5px;
-      background-color: #A3A3A3;
+      background-image: linear-gradient(#F3C6A8, #F4EDE9);
     }
     #pydetails{
-      border-color: red;
+      border-color: #F7623D;
       display: none;
     }
     /* #pydetails.video{
@@ -33,11 +33,11 @@ session_start();
       float: right;
     }*/
     #javadetails{
-      border-color: yellow;
+      border-color: #14D085;
       display: none;
     }
     #rdetails{
-      border-color: green;
+      border-color: #0BCCD2;
       display: none;
     }
     section {
@@ -84,7 +84,7 @@ session_start();
     <div  style=" padding: 30px 0; text-align:center; font-size: 38px; font-weight: 700;">Dashboard</div>
       <div id="pydetails" class="details">
         <section>
-        <h1 style=" text-align:center; color:red; font-size: 38px; font-weight: 700;">Python</h1><br>
+        <h1 style=" text-align:center; color:#F7623D; font-size: 38px; font-weight: 700;">Python</h1><br>
           <hr>
           <br>
           <aside>
@@ -121,7 +121,7 @@ session_start();
       <br>
       <div id="javadetails" class="details">
         <section>
-        <h1 style=" text-align:center; color:yellow; font-size: 38px; font-weight: 700;">Java</h1><br>
+        <h1 style=" text-align:center; color:#14D085; font-size: 38px; font-weight: 700;">Java</h1><br>
           <hr>
           <br>
           <aside>
@@ -159,7 +159,7 @@ session_start();
       <br>
       <div id="rdetails" class="details">
         <section>
-        <h1 style=" text-align:center; color:green; font-size: 38px; font-weight: 700;">R</h1><br>
+        <h1 style=" text-align:center; color:#0BCCD2; font-size: 38px; font-weight: 700;">R</h1><br>
           <hr>
           <br>
           <aside>
