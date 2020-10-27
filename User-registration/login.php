@@ -74,6 +74,7 @@
 </body>
 </html>
 <?php
+session_start();
 if (isset($_POST['submit']))
  {
 	$conn = mysqli_connect("localhost", "root", "", "valorant");
@@ -96,7 +97,9 @@ function function_alert($message) {
       $first_name=$row["first_name"];
       $subs=$row["subjects"];
 	    if($row["password"]==$pass){
-        session_start();
+        // session_start();
+        $_SESSION["id"] = $row['id'];
+        $_SESSION["name"] = $row['name'];
 	    {
         $_SESSION["first"]=$first_name;
         $_SESSION["subs"]=$subs;

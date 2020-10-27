@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
+    #piechart{
+      margin: auto;
+      /* */
+    }
     .side {
       display: flex;
       flex-direction: column;
@@ -53,11 +57,11 @@
     }    
   </style>
 </head>
-<body>
+<body style="background-color: white">
 <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
+        <a href="#"><img src="Templates/Images/logo.png"  width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
@@ -88,10 +92,12 @@
     </aside>
     <section class="side">
       <!-- <div class="title">Administrator</div> -->
+      <div id="piechart"></div>
     </section>
   </div>
 </div>
-<script type="text/javascript">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" >
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector(".menu-btn");
@@ -109,6 +115,28 @@ cancelBtn.onclick = ()=>{
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Work', 8],
+  ['Eat', 2],
+  ['TV', 4],
+  ['Gym', 2],
+  ['Sleep', 8]
+
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':700, 'height':500};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
 </script>
 </body>
 </html>
