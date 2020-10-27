@@ -142,15 +142,16 @@ else header("Location:Homepage.html");
         <?php
         $i=0;
         while($row = mysqli_fetch_array($result)) {
-        if(strpos($row['subjects'], 'Python')!==false){
+        if(strpos($row['subjects'], 'R')!==false){
         echo "<tr><td>";echo $row['student_id']; echo"</td>";
         echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
         echo "<td>";echo $row['email']; echo"</td>";
         echo "<td>";echo $row['mob_no']; echo"</td>";
-        echo "<td>";echo $row['tele_no']; echo"</td></tr>";     
+        echo "<td>";echo $row['tele_no']; echo"</td></tr>"; 
+        $i++;    
         }
-        $i++;
         }
+        echo " Total students : ". $i;
         ?>
       </table>
     </section>
