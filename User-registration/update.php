@@ -1,10 +1,15 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "valorant");
+session_start();
+if($_SESSION["user"])
+{
+  $conn = mysqli_connect("localhost", "root", "", "valorant");
 
 if (!$conn) {
     die("Error connecting to database: " . mysqli_connect_error());
 }
 $result = mysqli_query($conn,"SELECT * FROM student_table");
+} 
+else header("Location:Homepage.html");
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,18 +86,14 @@ $result = mysqli_query($conn,"SELECT * FROM student_table");
   <nav class="navbar">
     <div class="content">
       <div class="logo">
-        <a href="Homepage.html"><img src="Templates/Images/logo.png"  width="147"></a>
+        <a href="#"><img src="Templates/Images/logo.png"  width="147"></a>
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
-        <!-- <li><a href="#">Services</a></li> -->
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
         <!-- <li><a href="#">Contact</a></li> -->
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/adminlogout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>

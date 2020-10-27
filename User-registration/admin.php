@@ -1,3 +1,12 @@
+<?php
+session_start();
+if($_SESSION["user"])
+{
+  echo "";
+} 
+else header("Location:Homepage.html");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +14,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
-    #piechart{
-      margin: auto;
-      /* */
-    }
     .side {
       display: flex;
       flex-direction: column;
@@ -57,7 +62,7 @@
     }    
   </style>
 </head>
-<body style="background-color: white">
+<body>
 <nav class="navbar">
     <div class="content">
       <div class="logo">
@@ -67,9 +72,7 @@
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
-        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/Homepage.html">Logout</a></li>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/adminlogout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -92,11 +95,9 @@
     </aside>
     <section class="side">
       <!-- <div class="title">Administrator</div> -->
-      <div id="piechart"></div>
     </section>
   </div>
 </div>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" >
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
@@ -115,28 +116,6 @@ cancelBtn.onclick = ()=>{
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
-
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Work', 8],
-  ['Eat', 2],
-  ['TV', 4],
-  ['Gym', 2],
-  ['Sleep', 8]
-
-]);
-
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'My Average Day', 'width':700, 'height':500};
-
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-}
 </script>
 </body>
 </html>

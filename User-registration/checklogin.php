@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['submit']))
  {
 	// connect to database
@@ -12,17 +13,18 @@ $pass=$_POST['password1'];
 $sql3 = "SELECT * FROM login where username='$user' ";  
 $result = $conn->query($sql3);
 
+
 if ($result->num_rows> 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     if($row["password"]==$pass){
+		$_SESSION["user"]=$row["username"];
     	header("location:admin.php");
-    }
-    else{
-    	header("location:login.html");
     }
   }
 }
+else{
+	header("location:Homepage.html");
 }
-
+}
 ?>
