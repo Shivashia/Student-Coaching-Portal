@@ -65,7 +65,6 @@
               Dont have an Account?....<a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a>
               <br>
               <br>
-            
           </div>
         </form>
       </div>
@@ -85,7 +84,6 @@ $email=$_POST['email_login'];
 $pass=$_POST['password_login'];
 $sql3 = "SELECT * FROM student_table where email='$email' ";  
 $result = $conn->query($sql3);
-
 function function_alert($message) { 
 	echo "<script>
 	    alert('$message');
@@ -98,14 +96,9 @@ function function_alert($message) {
       $subs=$row["subjects"];
 	    if($row["password"]==$pass){
         // session_start();
-        $_SESSION["id"] = $row['id'];
-        $_SESSION["name"] = $row['name'];
-	    {
         $_SESSION["first"]=$first_name;
         $_SESSION["subs"]=$subs;
 		    header("location:student-login.php");
-		}
-	    	
 	    }
 	    else{
 	    	function_alert("Invalid password!!");
