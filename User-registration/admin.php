@@ -81,13 +81,13 @@
       <nav class="sidenav">
         <ul>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">New Student</a></li>
+          <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">New Student</a></li> -->
           <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li> 
         </ul>
       </nav>
     </aside>
     <section class="side">
-      <div class="title">Administrator</div>
+      <!-- <div class="title">Administrator</div> -->
     </section>
   </div>
 </div>
