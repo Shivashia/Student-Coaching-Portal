@@ -54,18 +54,13 @@ else header("Location:Homepage.html");
 }
 
  .imagehov {
-  /*box-shadow: 0 0 0 4px red;*/
-  /*transition: background 0.2s, color 0.2s;*/
   position: relative;
   display: inline-block;
   border-bottom: 1px;  
 }
 
 .imagehov:hover {
-  /*background: yellow;*/
   animation: spinAround 1s linear infinite;
-  /*visibility: visible;*/
-  /*color: red;*/
 }
 
 
@@ -92,7 +87,6 @@ else header("Location:Homepage.html");
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <!-- <li><a href="#">Contact</a></li> -->
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/adminlogout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">
@@ -183,6 +177,4 @@ cancelBtn.onclick = ()=>{
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
-
-
 </script>

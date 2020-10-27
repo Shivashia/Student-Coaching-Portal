@@ -28,12 +28,7 @@
           <i class="fas fa-times"></i>
         </div>
         <li><a href="Homepage.html">Home</a></li>
-        <!-- <li><a href="http://localhost/User-registration/aboutus.html">About</a></li> -->
-        <!-- <li><a href="#">Services</a></li> -->
-        <!-- <li><a href="http://localhost/User-registration/register.php">Register</a></li> -->
-        <!-- s -->
-        <!-- <li id="log"><a href="http://localhost/User-registration/login.php">Login</a></li> -->
-      </ul>
+        </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
       </div>
@@ -95,7 +90,6 @@ function function_alert($message) {
       $first_name=$row["first_name"];
       $subs=$row["subjects"];
 	    if($row["password"]==$pass){
-        // session_start();
         $_SESSION["first"]=$first_name;
         $_SESSION["subs"]=$subs;
 		    header("location:student-login.php");

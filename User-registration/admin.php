@@ -2,7 +2,12 @@
 session_start();
 if($_SESSION["user"])
 {
-  echo "";
+  $conn = mysqli_connect("localhost", "root", "", "valorant");
+
+if (!$conn) {
+    die("Error connecting to database: " . mysqli_connect_error());
+}
+$result = mysqli_query($conn,"SELECT * FROM student_table");
 } 
 else header("Location:Homepage.html");
 ?>
@@ -14,6 +19,35 @@ else header("Location:Homepage.html");
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   <link rel="stylesheet"  href="Templates/Homestyle.css">
   <style type="text/css">
+
+    #student-display {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #student-display th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      font-weight: bold;
+    }
+
+    #student-display td{
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #student-display tr:nth-child(even){background-color: #f2f2f2;}
+
+    #student-display tr:hover {background-color: #ddd;}
+
+    #student-display th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #f45702;
+      color: white;
+    }
+
     .side {
       display: flex;
       flex-direction: column;
@@ -29,7 +63,7 @@ else header("Location:Homepage.html");
       height: 100%;
       background: #f8f4e5;
       font-size: 12pt ;
-} 
+    } 
 
     .sidenav {
       position: relative;
@@ -60,6 +94,7 @@ else header("Location:Homepage.html");
       color: red;
       transform: scale(1.3);
     }    
+
   </style>
 </head>
 <body>
@@ -88,13 +123,36 @@ else header("Location:Homepage.html");
       <nav class="sidenav">
         <ul>
           <li><a href="#">Dashboard</a></li>
-          <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">New Student</a></li> -->
           <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li> 
         </ul>
       </nav>
     </aside>
     <section class="side">
-      <!-- <div class="title">Administrator</div> -->
+      <input type="submit" name="submit" id="student-login" value="Python">
+      <input type="submit" name="submit" id="student-login" value="Java">
+      <input type="submit" name="submit" id="student-login" value="R">
+      <table id="student-display" >
+        <tr>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Email id</th> 
+        <th>Mobile number</th>
+        <th>Telephone number</th>
+        </tr>
+        <?php
+        $i=0;
+        while($row = mysqli_fetch_array($result)) {
+        if(strpos($row['subjects'], 'Python')!==false){
+        echo "<tr><td>";echo $row['student_id']; echo"</td>";
+        echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
+        echo "<td>";echo $row['email']; echo"</td>";
+        echo "<td>";echo $row['mob_no']; echo"</td>";
+        echo "<td>";echo $row['tele_no']; echo"</td></tr>";     
+        }
+        $i++;
+        }
+        ?>
+      </table>
     </section>
   </div>
 </div>
