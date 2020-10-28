@@ -1,7 +1,7 @@
 body, html {
-  height: 100%;
+  /*height: 100%;*/
   margin: 0;
-  background-color:#DEDBDB;
+  /*background-color:black;*/
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -410,6 +410,7 @@ img {vertical-align: middle;}
   color: white; 
   text-align: center;
   font-size: 14pt;
+  
 }
 .information h2{
       color: black; 

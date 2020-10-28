@@ -49,20 +49,21 @@ else header("Location:Homepage.html");
       color: white;
     }
 
-    .side {
+   /* .side {
       display: block;
-      /*flex-direction: column;*/
+     
       align-items: center;
       justify-content: center;
       height: 100%;
-    }
+      background-color: black;
+    }*/
     .sidebar {
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 150px;
       width: 20%;
       height: 100%;
-      background: #f8f4e5;
+      background: black;
       font-size: 12pt;
     } 
 
@@ -124,7 +125,7 @@ else header("Location:Homepage.html");
     }
   </style>
 </head>
-<body>
+<body >
 <nav class="navbar">
     <div class="content">
       <div class="logo">
@@ -144,13 +145,13 @@ else header("Location:Homepage.html");
 <div class="bg">
 </div>
 
-<div class="about" >
+<div class="about">
   <div class="content">
     <div class="sidebar">
       <nav class="sidenav">
         <ul>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li> 
+          <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li>
         </ul>
       </nav>
     </div>
@@ -245,21 +246,25 @@ else header("Location:Homepage.html");
 <script type="text/javascript" >
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
+const sidebar = document.querySelector(".sidebar");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-  body.classList.add("disabled");
-}
-cancelBtn.onclick = ()=>{
-  body.classList.remove("disabled");
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-}
+// menuBtn.onclick = ()=>{
+//   navbar.classList.add("show");
+//   menuBtn.classList.add("hide");
+//   body.classList.add("disabled");
+// }
+// cancelBtn.onclick = ()=>{
+//   body.classList.remove("disabled");
+//   navbar.classList.remove("show");
+//   menuBtn.classList.remove("hide");
+// }
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+  this.scrollY > 20 ? sidebar.classList.add("sticky") : sidebar.classList.remove("sticky");
   }
+
+
 
 function tableVisible(subject) {
   document.getElementById('Python-table').style.display='none';
