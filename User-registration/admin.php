@@ -23,6 +23,7 @@ else header("Location:Homepage.html");
     #student-display {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
+      border: solid black 2px;
       width: 100%;
     }
     #student-display th {
@@ -49,8 +50,8 @@ else header("Location:Homepage.html");
     }
 
     .side {
-      display: flex;
-      flex-direction: column;
+      display: block;
+      /*flex-direction: column;*/
       align-items: center;
       justify-content: center;
       height: 100%;
@@ -62,7 +63,7 @@ else header("Location:Homepage.html");
       width: 20%;
       height: 100%;
       background: #f8f4e5;
-      font-size: 12pt ;
+      font-size: 12pt;
     } 
 
     .sidenav {
@@ -94,7 +95,33 @@ else header("Location:Homepage.html");
       color: red;
       transform: scale(1.3);
     }    
+    #tables {
+      margin-left: 20%;
+      padding: 20px 20px 20px 20px;
+    }
+    #tables table {
+      margin: auto;
+    }
 
+    #tables input {
+      line-height: 28pt;
+      padding: 0 20px;
+      width: 150px;
+      background: #f45702;
+      color: white;
+      letter-spacing: 2px;
+      transition: .2s all ease-in-out;
+    }
+
+    #Python-table {
+      display: none;
+    }
+    #Java-table {
+      display: none;
+    }
+    #R-table {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -117,46 +144,104 @@ else header("Location:Homepage.html");
 <div class="bg">
 </div>
 
-<div class="about">
-    <div class="content">
-    <aside class="sidebar">
+<div class="about" >
+  <div class="content">
+    <div class="sidebar">
       <nav class="sidenav">
         <ul>
           <li><a href="#">Dashboard</a></li>
           <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php">Update Student</a></li> 
         </ul>
       </nav>
-    </aside>
-    <section class="side">
-      <input type="submit" name="submit" id="student-login" value="Python">
-      <input type="submit" name="submit" id="student-login" value="Java">
-      <input type="submit" name="submit" id="student-login" value="R">
-      <table id="student-display" >
-        <tr>
-        <th>Student Id</th>
-        <th>Student Name</th>
-        <th>Email id</th> 
-        <th>Mobile number</th>
-        <th>Telephone number</th>
-        </tr>
-        <?php
-        $i=0;
-        while($row = mysqli_fetch_array($result)) {
-        if(strpos($row['subjects'], 'R')!==false){
-        echo "<tr><td>";echo $row['student_id']; echo"</td>";
-        echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
-        echo "<td>";echo $row['email']; echo"</td>";
-        echo "<td>";echo $row['mob_no']; echo"</td>";
-        echo "<td>";echo $row['tele_no']; echo"</td></tr>"; 
-        $i++;    
-        }
-        }
-        echo " Total students : ". $i;
-        ?>
-      </table>
-    </section>
+    </div>
   </div>
 </div>
+    <div id="tables">
+      <table>
+        <tr>
+          <td><input type="button" id="Python-button" value="Python" onclick="tableVisible('Python')"></td>
+          <td><input type="button" id="Java-button" value="Java" onclick="tableVisible('Java')"></td>
+          <td><input type="button" id="R-button" value="R" onclick="tableVisible('R')"></td>
+        </tr>
+      </table>
+      <div id="Python-table">
+        <table id="student-display">
+          <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Email id</th> 
+          <th>Mobile number</th>
+          <th>Telephone number</th>
+          </tr>
+          <?php
+          $i=0;
+          while($row = mysqli_fetch_array($result)) {
+            if(strpos($row['subjects'], 'Python')!==false){
+              echo "<tr><td>";echo $row['student_id']; echo"</td>";
+              echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
+              echo "<td>";echo $row['email']; echo"</td>";
+              echo "<td>";echo $row['mob_no']; echo"</td>";
+              echo "<td>";echo $row['tele_no']; echo"</td></tr>"; 
+              $i++; 
+            }
+          }
+          echo "<h3>Total students : ". $i."</h3>";
+          $result = mysqli_query($conn,"SELECT * FROM student_table");
+          ?>
+        </table>
+      </div>
+      <div id="Java-table">
+        <table id="student-display">
+          <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Email id</th> 
+          <th>Mobile number</th>
+          <th>Telephone number</th>
+          </tr>
+          <?php
+          $i=0;
+          while($row = mysqli_fetch_array($result)) {
+            if(strpos($row['subjects'], 'Java')!==false){
+              echo "<tr><td>";echo $row['student_id']; echo"</td>";
+              echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
+              echo "<td>";echo $row['email']; echo"</td>";
+              echo "<td>";echo $row['mob_no']; echo"</td>";
+              echo "<td>";echo $row['tele_no']; echo"</td></tr>"; 
+              $i++;
+            }
+          }
+          echo "<h3>Total students : ". $i."</h3>";
+          $result = mysqli_query($conn,"SELECT * FROM student_table");
+          ?>
+        </table>
+      </div>
+      <div id="R-table">
+        <table id="student-display">
+          <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Email id</th> 
+          <th>Mobile number</th>
+          <th>Telephone number</th>
+          </tr>
+          <?php
+          $i=0;
+          while($row = mysqli_fetch_array($result)) {
+            if(strpos($row['subjects'], 'R')!==false){
+              echo "<tr><td>";echo $row['student_id']; echo"</td>";
+              echo "<td>";echo $row['first_name']." ".$row['mid_name']." ".$row['last_name']; echo"</td>";
+              echo "<td>";echo $row['email']; echo"</td>";
+              echo "<td>";echo $row['mob_no']; echo"</td>";
+              echo "<td>";echo $row['tele_no']; echo"</td></tr>"; 
+              $i++;
+            }
+          }
+          echo "<h3>Total students : ". $i."</h3>";
+          ?>
+        </table>
+      </div>
+    </div>
 <script type="text/javascript" >
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
@@ -175,6 +260,18 @@ cancelBtn.onclick = ()=>{
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
+
+function tableVisible(subject) {
+  document.getElementById('Python-table').style.display='none';
+  document.getElementById('Java-table').style.display='none';
+  document.getElementById('R-table').style.display='none';
+  document.getElementById('Python-button').style.background='#f45702';
+  document.getElementById('Java-button').style.background='#f45702';
+  document.getElementById('R-button').style.background='#f45702';
+  document.getElementById(subject+"-table").style.display='block';
+  document.getElementById(subject+"-button").style.background='#5702f4';
+}
+
 </script>
 </body>
 </html>
