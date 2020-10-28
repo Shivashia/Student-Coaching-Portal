@@ -60,10 +60,10 @@ else header("Location:Homepage.html");
     .sidebar {
       position: fixed;
       left: 0;
-      top: 150px;
+      top: 120px;
       width: 20%;
       height: 100%;
-      background: black;
+      background: rgb(5, 15, 25);
       font-size: 12pt;
     } 
 
@@ -99,9 +99,13 @@ else header("Location:Homepage.html");
     #tables {
       margin-left: 20%;
       padding: 20px 20px 20px 20px;
+      /*border: solid green 2px;*/
     }
     #tables table {
       margin: auto;
+      width: 60%;
+      text-align: center;
+      /*border: solid green 2px;*/
     }
 
     #tables input {
@@ -110,8 +114,9 @@ else header("Location:Homepage.html");
       width: 150px;
       background: #f45702;
       color: white;
-      letter-spacing: 2px;
+      letter-spacing: 0.3em;
       transition: .2s all ease-in-out;
+      border: none;
     }
 
     #Python-table {
@@ -160,7 +165,7 @@ else header("Location:Homepage.html");
     <div id="tables">
       <table>
         <tr>
-          <td><input type="button" id="Python-button" value="Python" onclick="tableVisible('Python')"></td>
+          <td ><input type="button" id="Python-button" value="Python" onclick="tableVisible('Python')"></td>
           <td><input type="button" id="Java-button" value="Java" onclick="tableVisible('Java')"></td>
           <td><input type="button" id="R-button" value="R" onclick="tableVisible('R')"></td>
         </tr>
@@ -186,7 +191,7 @@ else header("Location:Homepage.html");
               $i++; 
             }
           }
-          echo "<h3>Total students : ". $i."</h3>";
+          echo "<h3 style='margin-left:70px;'>Total students : ". $i."</h3>";
           $result = mysqli_query($conn,"SELECT * FROM student_table");
           ?>
         </table>
@@ -212,7 +217,7 @@ else header("Location:Homepage.html");
               $i++;
             }
           }
-          echo "<h3>Total students : ". $i."</h3>";
+          echo "<h3 style='margin-left:70px;'>Total students : ". $i."</h3>";
           $result = mysqli_query($conn,"SELECT * FROM student_table");
           ?>
         </table>
@@ -238,7 +243,7 @@ else header("Location:Homepage.html");
               $i++;
             }
           }
-          echo "<h3>Total students : ". $i."</h3>";
+          echo "<h3 style='margin-left:70px;'>Total students : ". $i."</h3>";
           ?>
         </table>
       </div>
@@ -274,7 +279,7 @@ function tableVisible(subject) {
   document.getElementById('Java-button').style.background='#f45702';
   document.getElementById('R-button').style.background='#f45702';
   document.getElementById(subject+"-table").style.display='block';
-  document.getElementById(subject+"-button").style.background='#5702f4';
+  document.getElementById(subject+"-button").style.background='rgb(5, 15, 25)';
 }
 
 </script>
