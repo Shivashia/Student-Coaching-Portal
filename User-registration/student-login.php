@@ -28,12 +28,6 @@ else header("Location:Homepage.html");
       border-color: #F7623D;
       display: none;
     }
-    /* #pydetails.video{
-      float: left;
-    }
-    #pydetails.texts{
-      float: right;
-    }*/
     #javadetails{
       border-color: #14D085;
       display: none;
@@ -66,10 +60,6 @@ else header("Location:Homepage.html");
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <!-- <li><a href="Homepage.html">Home</a></li> -->
-        <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li> -->
-        <!-- <li><a href="#">Services</a></li> -->
-        <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li> -->
         <li><a>Hello, <?php echo $first_name; ?></a></li>
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/logout.php">Logout</a></li>
       </ul>
@@ -95,7 +85,6 @@ else header("Location:Homepage.html");
             </video>
           </aside>
           <article>
-         
             <h2>Syllabus</h2><br>
             <h4>1. Python Fundamentals</h4>
             <h4>2. Object Oriented Programming with Python</h4>
@@ -181,12 +170,6 @@ else header("Location:Homepage.html");
           <article>
             <br><h2>Course Outcome</h2><br>
             Students will be familiar to the R ecosystem and learn how to use R for the most common data analysis tasks, including loading, cleaning, transforming, summarizing and visualizing data.<br>
-            <!-- <ol style="padding-left: 35px">
-              <li>Implement the use of basic Python syntax</li>
-              <li>Implement Object oriented programming in Python</li>
-              <li>Create GUI in Python</li>
-              <li>Implementat database connectivity in Python</li>
-            </ol> -->
           </article>
           <br>
           <hr>
@@ -198,20 +181,7 @@ else header("Location:Homepage.html");
     </div>
   </div>
 <script type="text/javascript">
-const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-  body.classList.add("disabled");
-}
-cancelBtn.onclick = ()=>{
-  body.classList.remove("disabled");
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-}
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }

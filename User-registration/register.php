@@ -16,8 +16,6 @@
         <i class="fas fa-times"></i>
       </div>
       <li><a href="Homepage.html">Home</a></li>
-      <!-- <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.htmln">About</a></li>
-      <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php">Login</a></li> -->
     </ul>
     <div class="icon menu-btn">
       <i class="fas fa-bars"></i>
@@ -97,24 +95,24 @@
       <br><hr><br>
       <input type="submit" id="register" name="submit2" value="Submit Form" onclick="validate()">
     </form>
+    <div class="footer"> 
+  <br><hr><br>
+  <img src="Templates/Images/logo.png" width="75">
+  &copy 2020 Valorant Coaching Classes. ALL RIGHTS RESERVED.
+  <ul>
+    <li><a href=""><img src="Templates/Images/facebook.png"></a></li>
+    <li><a href=""><img src="Templates/Images/linkedin.png"></a></li>
+    <li><a href=""><img src="Templates/Images/twitter.png"></a></li>
+    <li><a href=""><img src="Templates/Images/youtube.png"></a></li>
+    <li><a href=""><img src="Templates/Images/instagram.png"></a></li>
+  </ul>
+  <br><br>
+</div>
   </div>
-</div>  
+</div>
 </body>
 <script type="text/javascript">
-const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-  body.classList.add("disabled");
-}
-cancelBtn.onclick = ()=>{
-  body.classList.remove("disabled");
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-}
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }

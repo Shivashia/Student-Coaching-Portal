@@ -48,15 +48,6 @@ else header("Location:Homepage.html");
       background-color: #f45702;
       color: white;
     }
-
-   /* .side {
-      display: block;
-     
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      background-color: black;
-    }*/
     .sidebar {
       position: fixed;
       left: 0;
@@ -99,13 +90,11 @@ else header("Location:Homepage.html");
     #tables {
       margin-left: 20%;
       padding: 20px 20px 20px 20px;
-      /*border: solid green 2px;*/
     }
     #tables table {
       margin: auto;
       width: 60%;
       text-align: center;
-      /*border: solid green 2px;*/
     }
 
     #tables input {
@@ -249,27 +238,10 @@ else header("Location:Homepage.html");
       </div>
     </div>
 <script type="text/javascript" >
-const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
-const sidebar = document.querySelector(".sidebar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
-// menuBtn.onclick = ()=>{
-//   navbar.classList.add("show");
-//   menuBtn.classList.add("hide");
-//   body.classList.add("disabled");
-// }
-// cancelBtn.onclick = ()=>{
-//   body.classList.remove("disabled");
-//   navbar.classList.remove("show");
-//   menuBtn.classList.remove("hide");
-// }
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-  this.scrollY > 20 ? sidebar.classList.add("sticky") : sidebar.classList.remove("sticky");
   }
-
-
 
 function tableVisible(subject) {
   document.getElementById('Python-table').style.display='none';

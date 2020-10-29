@@ -15,11 +15,8 @@
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <!-- <li><a href="Homepage.html">Home</a></li> -->
         <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/aboutus.html">About</a></li>
-        <!-- <li><a href="#">Services</a></li> -->
         <li><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a></li>
-        <!-- <li><a href="#">Contact</a></li> -->
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php">Login</a></li>
       </ul>
       <div class="icon menu-btn">
@@ -57,7 +54,7 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
       </div>
-<br>
+      <br>
 
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span> 
@@ -67,7 +64,7 @@
     </div>
   </div>
 <div class="information">
-    <div id="Python">
+  <div id="Python">
     <p><h2>Python</h2></p>
     <hr>
     <br>
@@ -113,6 +110,8 @@
   </div>
 </div>
 <script type="text/javascript">
+const navbar = document.querySelector(".navbar");
+
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -120,20 +119,19 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-const body = document.querySelector("body");
-const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-  body.classList.add("disabled");
-}
-cancelBtn.onclick = ()=>{
-  body.classList.remove("disabled");
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-}
+// const body = document.querySelector("body");
+// const menuBtn = document.querySelector(".menu-btn");
+// const cancelBtn = document.querySelector(".cancel-btn");
+// menuBtn.onclick = ()=>{
+//   navbar.classList.add("show");
+//   menuBtn.classList.add("hide");
+//   body.classList.add("disabled");
+// }
+// cancelBtn.onclick = ()=>{
+//   body.classList.remove("disabled");
+//   navbar.classList.remove("show");
+//   menuBtn.classList.remove("hide");
+// }
 window.onscroll = ()=>{
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
   }
@@ -163,7 +161,7 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += "active";
 }
 </script>
 <div class="footer"> 
