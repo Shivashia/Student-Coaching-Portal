@@ -9,10 +9,11 @@
       text-align: center;
     }
     body{
-      color: black;
+       color: black;
+       height: 100%;
        background-image:url("Templates/Images/background.png");
        background-position: center;
-       background-repeat: no-repeat;
+       /*background-repeat: no-repeat;*/
        background-size: cover; 
     }
   </style>

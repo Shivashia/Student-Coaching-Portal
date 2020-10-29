@@ -155,7 +155,7 @@ body, html {
 }
 
 .bg { 
-  height: 150px;
+  height: 200px;
   background-image:url("Images/background.png"); 
   background-position: center;
   background-repeat: no-repeat;
