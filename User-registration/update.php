@@ -84,6 +84,7 @@ else header("Location:Homepage.html");
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
+        <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/admin.php">Dashboard</a></li>
         <li id="log"><a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/adminlogout.php">Logout</a></li>
       </ul>
       <div class="icon menu-btn">

@@ -32,24 +32,24 @@
       <label class="studname">Student Name</label>
       <br>
       <div class="your-class">
-        <input name="first_name" id="first_name" type="text" placeholder="FirstName" />
-        <input name="middle_name" id="middle_name" type="text" placeholder="MiddleName"/>
-        <input name="last_name" id="last_name" type="text" placeholder="LastName" /> 
+        <input name="first_name" id="first_name" type="text" placeholder="First Name " />
+        <input name="middle_name" id="middle_name" type="text" placeholder="Middle Name(optional)"/>
+        <input name="last_name" id="last_name" type="text" placeholder="Last Name" /> 
       </div>
       <br><hr><br>
-      <label class="studname">Password</label>
+      <label class="studname">Password *</label>
       <br>
       <input type="Password" id="password" name="password">
       <br><hr><br>
-      <label class="studname">Confirm Password</label>
+      <label class="studname">Confirm Password *</label>
       <br>
       <input type="Password" id="confirm_password" name="confirm_password">
       <br><hr><br>
-      <label class="studname">Birth Date</label>
+      <label class="studname">Birth Date *</label>
       <br>
       <input type="date" id="birthday" name="birthday" max="2001-12-31">
       <br><hr><br>
-      <label class="studname">Gender</label>
+      <label class="studname">Gender *</label>
       <br>
       <select name="gender" id="gender">
         <option value="male">Male</option>
@@ -57,24 +57,24 @@
         <option value="others">Others</option>
       </select>
       <br><br><hr><br>
-      <label class="studname">Address</label>
+      <label class="studname">Address *</label>
       <br>
       <textarea rows="5" name="address" id="address" placeholder="Enter The address here" cols="50"></textarea>
       <br><br><hr><br>
-      <label class="studname">Student Email</label>
+      <label class="studname">Student Email *</label>
       <br>
       <input type="Email" name="email" id="email" placeholder="email@xyz.com/in">
       <br><hr><br>
-      <label class="studname">Contact numbers</label>
+      <label class="studname">Contact numbers </label>
       <br>
       <div>
-        <label>Mobile Number</label>
+        <label>Mobile Number *</label>
         <input type="Number" name="mobno1" id="phnum1">
         <label>Telephone Number</label>
         <input type="Number" name="mobno2" id="phnum2">
       </div>
       <hr>
-      <label class="studname">Programming Languages</label>
+      <label class="studname">Programming Languages *</label>
       <br>
       <div class="checkbox checkbox-inline">
         <label>
@@ -95,6 +95,8 @@
       <br><hr><br>
       <input type="submit" id="register" name="submit2" value="Submit Form" onclick="validate()">
     </form>
+    <br>
+    <br>
     <div class="footer"> 
   <br><hr><br>
   <img src="Templates/Images/logo.png" width="75">
@@ -242,8 +244,8 @@ if(isset($_POST['submit2'])){
     }
   function function_alert() { 
       echo "<script>
-        alert('Inserted Successfully');
-        window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php';
+        alert('Registered Successfully');
+        window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php';
         </script>"; 
       }
 $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
