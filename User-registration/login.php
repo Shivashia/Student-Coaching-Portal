@@ -59,6 +59,9 @@
               Dont have an Account?....<a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a>
               <br>
               <br>
+              <br>
+              <br>
+              Forgot Password?<a href=https://docs.google.com/forms/d/e/1FAIpQLSeb4Wv3JRLRx_XZ4iBv5InMgQYkuMfQwebpPMyOYGYy9vRyPg/viewform?usp=sf_link>Click Here</a>
           </div>
         </form>
       </div>
