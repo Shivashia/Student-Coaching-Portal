@@ -28,7 +28,7 @@
   <div class="container">
     <h3>Student Details</h3>
     <hr><br>
-    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php" onsubmit="return validate()">
+    <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/register.php" onsubmit="return validate()">
       <label class="studname">Student Name</label>
       <br>
       <div class="your-class">
@@ -245,7 +245,7 @@ if(isset($_POST['submit2'])){
   function function_alert() { 
       echo "<script>
         alert('Registered Successfully');
-        window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php';
+        window.location.href='http://localhost/STUDENT-COACHING-PORTAL/login.php';
         </script>"; 
       }
 $sql1="INSERT INTO student_table SET first_name='$f_nm', mid_name='$m_nm', last_name='$l_nm', password='$pass',
