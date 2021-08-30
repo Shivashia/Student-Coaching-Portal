@@ -42,7 +42,7 @@
           <hr>
           <br>
           <div id="login_table">
-            <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/login.php">
+            <form method="post" action="http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php">
               <label>Email</label>
               <br>
               <input type="Email" name="email_login" id="name1">
@@ -56,7 +56,7 @@
               <input type="submit" name="submit" id="student-login" value="Login">
               <br>
               <br>
-              Dont have an Account?....<a href="http://localhost/STUDENT-COACHING-PORTAL/register.php">Register</a>
+              Dont have an Account?....<a href="http://localhost/STUDENT-COACHING-PORTAL/User-registration/register.php">Register</a>
               <br>
               <br>
               <br>
@@ -84,7 +84,7 @@ $result = $conn->query($sql3);
 function function_alert($message) { 
 	echo "<script>
 	    alert('$message');
-	    window.location.href='http://localhost/STUDENT-COACHING-PORTAL/login.php';
+	    window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/login.php';
 	    </script>"; 
 	}
 	if ($result->num_rows> 0) {

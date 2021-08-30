@@ -7,7 +7,7 @@ $sql1 = "DELETE FROM student_table WHERE student_id='" . $_GET["student_id"] . "
 function function_alert() { 
     echo "<script>
       alert('Deleted Successfully');
-      window.location.href='http://localhost/STUDENT-COACHING-PORTAL/update.php';
+      window.location.href='http://localhost/STUDENT-COACHING-PORTAL/User-registration/update.php';
       </script>"; 
     }
 if (mysqli_query($conn, $sql1)) {
